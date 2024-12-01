@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boekenclub</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Boekenclub</h1>
+
+        <!-- Formulier om een boek toe te voegen -->
+        <form id="bookForm">
+            <input type="text" id="reviewerName" placeholder="Jouw naam" required>
+            <input type="text" id="bookName" placeholder="Boeknaam" required>
+            <textarea id="opinion" placeholder="Wat vind je ervan?" rows="3" required></textarea>
+            <label for="rating">Beoordeling:</label>
+            <select id="rating">
+                <option value="1">1 Ster</option>
+                <option value="2">2 Sterren</option>
+                <option value="3">3 Sterren</option>
+                <option value="4">4 Sterren</option>
+                <option value="5">5 Sterren</option>
+            </select>
+            <input type="text" id="recommendedTo" placeholder="Aanbevolen voor (scheid namen met komma's)" required>
+            <button type="submit">Toevoegen</button>
+        </form>
+
+        <!-- Boeklijst -->
+        <div id="bookList">
+            <h2>Boekenlijst</h2>
+        </div>
+
+        <!-- Aanbevelingen zoeken -->
+        <div id="recommendedBooks">
+            <h2>Aanbevolen boeken</h2>
+            <input type="text" id="searchName" placeholder="Vul je naam in">
+            <button id="filterBooks">Bekijk Aanbevelingen</button>
+            <div id="recommendationList"></div>
+        </div>
+
+        <!-- Boektitel zoeken -->
+        <div id="searchBook">
+            <h2>Zoek een boek</h2>
+            <input type="text" id="searchBookTitle" placeholder="Vul de titel van een boek in">
+            <button id="searchBookButton">Zoek Boek</button>
+            <div id="searchResult"></div>
+        </div>
+    </div>
+</body>
+</html>
